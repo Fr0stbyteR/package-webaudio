@@ -48,6 +48,5 @@ export default async () => ({
     "audioIn~": AudioIn,
     "audioOut~": AudioOut,
     "plugin~": Plugin,
-    "buffer~": Buffer,
     "bufferSource~": BufferSrc,
 });

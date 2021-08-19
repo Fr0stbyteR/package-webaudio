@@ -8,8 +8,8 @@ const config = {
   entry: {
     index: './src/index.ts',
     "index.jspatpkg": './src/index.jspatpkg.ts',
-    "index.jsdsppkg.main": './src/index.jsdsppkg.main.ts',
-    "index.jsdsppkg.aw": './src/index.jsdsppkg.aw.ts'
+    // "index.jsdsppkg.main": './src/index.jsdsppkg.main.ts',
+    // "index.jsdsppkg.aw": './src/index.jsdsppkg.aw.ts'
   },
   resolve: {
     fallback: {

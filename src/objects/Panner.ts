@@ -1,8 +1,7 @@
 import WebAudioObject from "./base";
 import { Bang, isBang } from "../sdk";
-import { decodeLine } from "@jspatcher/jspatcher/src/utils/utils";
+import { decodeLine, TBPF } from "../utils";
 import type { IInletsMeta, IOutletsMeta, IPropsMeta } from "@jspatcher/jspatcher/src/core/objects/base/AbstractObject";
-import type { TBPF } from "@jspatcher/jspatcher/src/core/types";
 
 type I = [Bang, TBPF, TBPF, TBPF, TBPF, TBPF, TBPF, PannerOptions];
 export default class Panner extends WebAudioObject<PannerNode, {}, I, [null, PannerNode], [], PannerOptions> {

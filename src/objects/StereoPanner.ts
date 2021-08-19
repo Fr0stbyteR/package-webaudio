@@ -1,8 +1,7 @@
 import WebAudioObject from "./base";
 import { Bang, isBang } from "../sdk";
-import { decodeLine } from "@jspatcher/jspatcher/src/utils/utils";
+import { decodeLine, TBPF } from "../utils";
 import type { IInletsMeta, IOutletsMeta, IArgsMeta } from "@jspatcher/jspatcher/src/core/objects/base/AbstractObject";
-import type { TBPF } from "@jspatcher/jspatcher/src/core/types";
 
 export default class StereoPanner extends WebAudioObject<StereoPannerNode, {}, [Bang, TBPF], [null, StereoPannerNode], [number]> {
     static description = "WebAudio StereoPannerNode";

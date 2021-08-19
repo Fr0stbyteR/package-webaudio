@@ -1,6 +1,6 @@
 import WebAudioObject from "./base";
 import { Bang, isBang } from "../sdk";
-import { isNumberArray } from "@jspatcher/jspatcher/src/utils/utils";
+import { isNumberArray } from "../utils";
 import type { IInletsMeta, IOutletsMeta, IArgsMeta } from "@jspatcher/jspatcher/src/core/objects/base/AbstractObject";
 
 type I = [Bang, number[], number[]];

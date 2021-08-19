@@ -1,8 +1,7 @@
 import WebAudioObject from "./base";
 import { Bang, isBang, PatcherAudio } from "../sdk";
-import { decodeLine } from "@jspatcher/jspatcher/src/utils/utils";
+import { decodeLine, TBPF } from "../utils";
 import type { IInletsMeta, IOutletsMeta, IPropsMeta } from "@jspatcher/jspatcher/src/core/objects/base/AbstractObject";
-import type { TBPF } from "@jspatcher/jspatcher/src/core/types";
 
 type I = [Bang | boolean | number | PatcherAudio | AudioBuffer, TBPF, TBPF, boolean, number, number];
 interface P extends Omit<Required<AudioBufferSourceOptions>, "buffer"> {}
