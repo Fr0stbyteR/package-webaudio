@@ -29,6 +29,7 @@ export default class Media extends WebAudioObject<MediaElementAudioSourceNode, {
                 if (isBang(data)) {
                     if (this.node) this.outlet(1, this.node);
                 } else if (data instanceof HTMLMediaElement) {
+                    if (this._.element === data) return;
                     this._.element = data;
                     this.resetNode();
                     this.outlet(1, this.node);

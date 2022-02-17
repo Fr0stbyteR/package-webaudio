@@ -22,10 +22,12 @@ import WaveShaper from "./objects/WaveShaper";
 import AudioIn from "./objects/AudioIn";
 import AudioOut from "./objects/AudioOut";
 import BufferSrc from "./objects/BufferSource";
+import htmlAudio from "./objects/htmlAudio";
 
 export default async () => ({
     audioContext,
     audioWorklet,
+    htmlAudio,
     "node~": AnyNode,
     "constant~": Constant,
     "oscillator~": Oscillator,
@@ -47,6 +49,5 @@ export default async () => ({
     "waveshaper~": WaveShaper,
     "audioIn~": AudioIn,
     "audioOut~": AudioOut,
-    "plugin~": Plugin,
     "bufferSource~": BufferSrc,
 });

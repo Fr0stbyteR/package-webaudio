@@ -11,6 +11,7 @@ export const {
     BaseUI,
     DefaultObject,
     DefaultUI,
+    DOMUI,
     generateRemotedObject,
     generateDefaultObject,
     generateRemoteObject,
