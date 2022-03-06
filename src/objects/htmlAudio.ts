@@ -82,6 +82,10 @@ export default class htmlAudio extends BaseObject<{}, {}, [Bang | string | boole
     _ = { element: document.createElement("audio") as HTMLAudioElement };
     subscribe() {
         super.subscribe();
+        const handleAudioCtxStateChange = () => {
+            const e = this._.element;
+            if (e.autoplay && e.paused) e.play();
+        };
         this.on("preInit", () => {
             this.inlets = 1;
             this.outlets = 1;
@@ -103,6 +107,7 @@ export default class htmlAudio extends BaseObject<{}, {}, [Bang | string | boole
             e.crossOrigin = crossOrigin;
             e.src = this.args[0] || "";
             this.updateUI({ children: [e] });
+            this.audioCtx.addEventListener("statechange", handleAudioCtxStateChange);
         });
         this.on("updateArgs", () => {
             this._.element.src = this.args[0] || "";
@@ -132,5 +137,8 @@ export default class htmlAudio extends BaseObject<{}, {}, [Bang | string | boole
                 this.outlet(0, this._.element);
             }
         });
+        this.on("destroy", () => {
+            this.audioCtx.removeEventListener("statechange", handleAudioCtxStateChange);
+        })
     }
 }
