@@ -1,6 +1,6 @@
 {
   "name": "@jspatcher/package-webaudio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The WebAudio package for JSPatcher",
   "main": "dist/index.js",
   "scripts": {
